@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: rundeck
+  namespace: common-services
+  labels:
+    app: rundeck
+spec:
+  storageClassName: nfs-provisioner
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: 10Gi
